@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Luis Santiago Vazquez Alvarado y Angel Gabriel Vargas Montes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grand Gourmet</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/reserve.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="nav">
+            <a href="index.html"><img src="./img/LogoRestaurant.png" alt="Logo del restaurant" class="logo" id="logo"></a>
+            <div class="nav-links">
+                <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li id="reserve"><a href="reserve.html">Reserve</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="signin.html">My Account</a></li>
+                </ul>
+            </div>
+            <button class="menu-hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <div class="general">
+            <div class="nombre-restaurante">
+                <h1>THE GRAND GOURMET</h1>
+            </div>
+            <div class="seccion1">
+                <div class="seccion-column1">
+                    <img src="./img/imagen1-reserve.jpg" alt="" id="img1">
+                </div>
+                <div class="seccion-column2">
+                    <h2 id="reservation">RESERVACIONES</h2>
+                    <br>
+                    <p>Reservas para 2-6 comensales en el restaurante
+                        Haga clic aquí para reservar una mesa
+                        <br><br>
+                        Tenga en cuenta que su reserva no está confirmada hasta que haya pagado un depósito de 200&#x20AC;/por comensal y haya recibido un correo electrónico de confirmación.
+                        <br><br>
+                        También tenga en cuenta que la reserva más temprana que puede hacer en el restaurante es 3 meses de antelación. Las mesas se liberan a las 6 PM CET del día.
+                        <br><br>
+                        Nuestro sistema de reservas tiene algunas limitaciones. Si no podemos cumplir con su solicitud a través de la reserva en línea, esto probablemente significa que la fecha deseada está totalmente reservada o no hay mesas disponibles para el número deseado de comensales. Como alternativa, puede agregarse a nuestra lista de espera. Si no puede reservar en línea, puede llamar a nuestro equipo de reservas durante el horario de oficina,
+                        <br><br>
+                        de martes a viernes de 9:00 a 15:00 al +45 6996 0020 (la oficina está cerrada en días festivos).
+                        <br><br>
+                        Reservas para 7 o más comensales
+                        Comuníquese con nuestro equipo de reservas para explorar las oportunidades que podemos ofrecerle.
+                </div>
+                <div class="seccion-column3">
+                    <img src="./img/imagen2-reserve.jpg" alt="" id="img3">
+                </div>
+                <div class="seccion-column2">
+                    <h2>OPENING HOURS</h2>
+                    <p>Lunch: Lunes - Sábado - 10:00 - 14:00</p>
+                    <hr>
+                    <p>Dinner: Lunes - Miércoles - 18:00 - 24:00</p>
+                    <hr>
+                    <p>Jueves - Sábado - 20:00 - 02:00</p>
+                    <hr>
+                    <p>The Grand Gourmet esta cerrado los Domingos</p>
+                    <br>
+                    <form id="reservaciones-form">
+                        <label for="id-reservacion">ID de Reservacion:</label>
+                        <input type="text" id="id-recepcion" name="id" required>
+                        
+                        <label for="nombre-reserva">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        
+                        <label for="fecha-recepcion">Fecha de la Recepción:</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                        
+                        <label for="num-personas">Número de Personas:</label>
+                        <input type="number" id="num-personas" name="num-personas" required>
+                        
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                        
+                        <input type="submit" value="Enviar">
+                      </form>
+                      <script>
+                        const form = document.querySelector('#reservaciones-form');
+                        
+                        form.addEventListener('submit', (event) => {
+                          event.preventDefault();
+                          
+                          const formData = new FormData(form);
+                          
+                          // Enviar datos del formulario a través de una solicitud HTTP a un servidor para guardarlos en una base de datos
+                          console.log(Object.fromEntries(formData.entries()));
+                          
+                          // Limpiar el formulario
+                          form.reset();
+                        });
+                      </script>
+                </div>
+                <div class="seccion-column1" id="foto-delete">
+                    <img src="./img/imagen2-reserve.jpg" alt="" id="img2">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Opening Hours</h4>
+                    <ul>
+                        <li><a href="">Lunes: 18:00 - 24:00</a></li>
+                        <li><a href="">Martes: 18:00 - 24:00</a></li>
+                        <li><a href="">Miércoles: 18:00 - 24:00</a></li>
+                        <li><a href="">Jueves: 20:00 - 02:00</a></li>
+                        <li><a href="">Viernes: 20:00 - 02:00</a></li>
+                        <li><a href="">Sábado: 20:00 - 02:00</a></li>
+                        <li><a href="">The Grand Gourmet esta cerrado los Domingos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Sobre Nosotros</h4>
+                    <ul>
+                        <li><a href="#welcome">Welcome to TGG</a></li>
+                        <li><a href="#nosotros">¿Quienes somos?</a></li>
+                        <li><a href="#historia-fundacion">Nuestra Historia</a></li>
+                        <li><a href="reserve.html">Reservaciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Cliente</h4>
+                    <ul>
+                        <li><a href="signin.html">Iniciar Sesión</a></li>
+                        <li><a href="signup.html">Registrarse</a></li>
+                        <li><a href="#">Atención a cliente</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Redes</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.google.com/" target="_blank"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <img src="./img/LogoRestaurant.png" class="logo-footer">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--<div class="footer-bottom">
+        <div class="first-box">
+            <a href="#">©Copyright 2023 / Santy's Desing S.A. / - Publicidad: 944010751 / Todos los derechos
+                reservados</a>
+        </div>
+    </div>-->
+</body>
+<script>
+    const menuHamburger = document.querySelector(".menu-hamburger")
+    const navLinks = document.querySelector(".nav-links")
+
+    menuHamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('mobile-menu')
+    })
+</script>
+
+</html>
+
+
+
